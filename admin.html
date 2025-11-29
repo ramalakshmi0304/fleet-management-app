@@ -6,25 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin page</title>
 </head>
+<style>
+    .card {
+        width: 200px;
+        border: 20px grey;
+        padding: auto;
+    }
+    
+</style>
+
 
 <body>
 
-    <div id="sidebar"></div>
-    <input type="text" id="regNo" placeholder="Reg No of Vehicle">
-    <select name="category" id="vcategory">
-        <option value="auto">Auto</option>
-        <option value="car">Car</option>
-        <option value="truck">Truck</option>
-        <option value="bus">Bus</option>
+    <h2>Add Fleet</h1>
+        <div id="card()">
+            <input type="text" id="regNo" placeholder="Reg No of Vehicle"><br><br>
+            <select name="category" id="vcategory">
+                <option value="auto">Auto</option>
+                <option value="car">Car</option>
+                <option value="truck">Truck</option>
+                <option value="bus">Bus</option>
 
-    </select>
+            </select><br><br>
 
-    <input type="text" id="driverName" placeholder="Driver Name">
+            <input type="text" id="driverName" placeholder="Driver Name"><br><br>
 
-    <select name="isavaialable" id="isavailable"></select>
+            <select name="isavaialable" id="isavailable">
+                <option value="avaialable">Available</option>
+                <option value="unavailable">Unavailable</option>
+            </select><br><br>
 
-     <option value="avaialable">Available</option>
-        <option value="unavailable">Unavailable</option>
+            <button btn="addfleet"> Add Fleet</button>
+        </div><br><br>
+
+        <div id="maincontent"></div>
+
 </body>
 
 </html>
+<script>
+
+    const img_url = "https://coding-platform.s3.amazonaws.com/dev/lms/tickets/5e80fcb6-3f8e-480c-945b-30a5359eb40e/JNmYjkVr3WOjsrbu.png"
+
+    const regNumber = document.getElementById("regNo").value;
+    const category = document.getElementById("vcategory").value;
+    const driverName = document.getElementById("driverName").value;
+    const availabilityStatus = document.getElementById("isavailable");
+
+    const card() => {
+        regNumber,
+        category,
+        driverName,
+        availabilityStatus,
+        img: img_url
+    }
+    cards.push(card);
+    rendercards(card);
+
+    render(cardlist){
+        let card = document.createElement("button");
+        card.button = "Update Driver";
+
+        let card1 = document.createElement("button-1");
+        card1.button = "Change Availability";
+
+        let card2 = document.createElement("button-2");
+        card1.button = "Delete Vehicle";
+
+    }
+
+
+</script>
