@@ -82,14 +82,14 @@
     const driverName = document.getElementById("driverName").value;
     const availabilityStatus = document.getElementById("availableFilter");
 
-    const addfleet('click'() =>{
-            regNumber,
+    const addfleet('click'() => {
+        regNumber,
             category,
             driverName,
             availabilityStatus,
             img: img_url
     })
-        
+
     addfleet.push(cards);
     rendercards(cards);
 
@@ -99,15 +99,25 @@
 
 
     render(cardlist){
-        let container= document.getElementById("container");
+        let container = document.getElementById("container");
 
-        container.innerHTML=""
+        container.innerHTML = ""
 
         cards.array.forEach(card => {
-            
-            
+            const regNumber = document.createElement("div");
+            regNumber = addfleet.regNo;
+            const category = document.createElement("div");
+            category=addfleet.category;
+            const driverName = document.createElement("div");
+            driverName=addfleet.drivername;
+
         });
     }
 
+    card.appendChild(regNumber)
+    card.appendChild(category)
+     card.appendChild(driverName)
+    card.appendChild(availabilityStatus)
+    card.appendChild(img)
 
 </script>
